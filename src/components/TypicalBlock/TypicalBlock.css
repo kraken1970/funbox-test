@@ -1,0 +1,145 @@
+.wrapper_typicalBlock {
+  width: 320px;
+  height: 480px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, transparent 45px, #1698d9 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-right: 80px;
+}
+
+.wrapper_typicalBlock:last-child {
+  margin-right: 0;
+}
+
+.wrapper_typicalBlock:hover {
+  background: linear-gradient(135deg, transparent 45px, #2ea8e6 0);
+}
+
+.wrapper_typicalBlock:hover .mass-block {
+  background-color: #2ea8e6;
+}
+
+.wrapper_typicalBlock:hover .text_status span {
+  color: #2ea8e6;
+}
+
+/* .wrapper_typicalBlock .hoverBox {
+  background: linear-gradient(135deg, transparent 45px, #2ea8e6 0);
+} */
+
+.typicalBlock {
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  border-radius: 12px;
+  background: url(../../img/cat.png) no-repeat left -2vw bottom -10vh,
+    linear-gradient(135deg, transparent 45px, #f2f2f2 0);
+  text-align: left;
+  padding: 25px 15px 15px 50px;
+  color: #666;
+  position: relative;
+}
+
+.typicalBlock_h3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 15px;
+}
+
+.hover-kote {
+  color: #e62e7a;
+}
+
+.typicalBlock_h2 {
+  color: #000000;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.typicalBlock_name-type {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.typicalBlock_text_status {
+  position: absolute;
+  text-shadow: 0 1px 0 black;
+  font-size: 13px;
+  line-height: 16px;
+  bottom: -25px;
+  width: 320px;
+  left: 0;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.typicalBlock_text_status p {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.typicalBlock_text_status span {
+  color: #1698d9;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+}
+
+.footerText-disabled {
+  text-shadow: 0 1px 0 black;
+  color: #ff6 !important;
+  font-size: 13px;
+}
+
+.activeBox:hover {
+  background: linear-gradient(135deg, transparent 45px, #d91667 0);
+}
+
+.activeBox {
+  background: linear-gradient(135deg, transparent 45px, #e62e7a 0);
+}
+
+.activeBox:hover .mass-block {
+  background-color: #d91667;
+}
+
+.activeBox .mass-block {
+  background-color: #e62e7a;
+}
+
+.wrapper_typicalBlock.disableBox {
+  background: linear-gradient(135deg, transparent 45px, #b3b3b3 0);
+  cursor: none;
+}
+
+.wrapper_typicalBlock.disableBox .mass-block {
+  background-color: #292828;
+}
+
+.disableBox .typicalBlock_h3,
+.disableBox .typicalBlock_h2,
+.disableBox .typicalBlock_name-type,
+.disableBox .mass-type {
+  opacity: 0.5;
+}
+
+.disableBox .typicalBlock-overlay {
+  width: 312px;
+  height: 472px;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    transparent 45px,
+    rgba(255, 255, 255, 0.5) 0
+  );
+  background-color: transparent;
+  position: absolute;
+}

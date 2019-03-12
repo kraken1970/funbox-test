@@ -1,28 +1,35 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import TypicalBlock from "./components/TypicalBlock";
+import { typeCatsFood } from "./constans";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+import "./App.css";
+
+const App = () => {
+  return (
+    <div className="App">
+      <div className="App_container">
+        <h1>Ты сегодня покормил кота?</h1>
+        <div className="App_wrap-blocks">
+          {typeCatsFood.map(item => {
+            return (
+              <TypicalBlock
+                key={item.nameType}
+                nameType={item.nameType}
+                sumOfDose={item.sumOfDose}
+                present={item.present}
+                massa={item.massa}
+                dopMessage={item.dopMessage}
+                status={item.status}
+                disabled={item.disabled}
+                footerActiveText={item.footerActiveText}
+                // actived={item.actived}
+              />
+            );
+          })}
+        </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default App;
