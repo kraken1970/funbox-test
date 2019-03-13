@@ -14,6 +14,11 @@
   min-height: 100vh;
 }
 
+.App_loading {
+  color: #ffffff;
+  font-size: 40px;
+}
+
 .App_container {
   display: flex;
   margin: auto;
