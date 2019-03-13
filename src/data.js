@@ -27,7 +27,7 @@ export const typeCatsFood = [
     dopMessage: "заказчик доволен",
     status: "disabledBox",
     actived: false,
-    disabled: false,
+    disabled: true,
     footerActiveText: "Филе из цыплят с трюфелями в бульоне."
   }
 ];

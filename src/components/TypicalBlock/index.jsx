@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import MassType from "../MassType";
+import {
+  defaultStyle,
+  disableStyle,
+  activeStyle,
+  prevH3,
+  hoverH3
+} from "./constans";
 import "./TypicalBlock.css";
-
-const defaultStyle = "wrapper_typicalBlock";
-const disableStyle = "wrapper_typicalBlock disableBox";
-const activeStyle = "wrapper_typicalBlock activeBox";
-const prevH3 = "Сказочное заморское яство";
-const hoverH3 = () => {
-  return <p className="hover-kote">Котэ не одобряет?</p>;
-};
 
 const TypicalBlock = ({
   nameType,
@@ -16,14 +15,11 @@ const TypicalBlock = ({
   present,
   massa,
   dopMessage,
-  status,
   disabled,
   actived,
-  hovered,
   footerActiveText
 }) => {
   const [activeBox, setStyle] = useState(actived);
-
   const [contentH3, setContentH3] = useState(prevH3);
 
   function handleChangeStatus() {
@@ -50,11 +46,7 @@ const TypicalBlock = ({
   if (disabled) {
     classNames = disableStyle;
   }
-  if (actived) {
-    classNames = activeStyle;
-  }
-
-  if (activeBox) {
+  if (actived || activeBox) {
     classNames = activeStyle;
   }
 

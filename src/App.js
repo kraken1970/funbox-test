@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import TypicalBlock from "./components/TypicalBlock";
-import { typeCatsFood } from "./constans";
+import { typeCatsFood } from "./data";
 
 import "./App.css";
 
@@ -22,7 +22,6 @@ const App = () => {
                 status={item.status}
                 disabled={item.disabled}
                 footerActiveText={item.footerActiveText}
-                // actived={item.actived}
               />
             );
           })}

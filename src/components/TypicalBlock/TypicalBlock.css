@@ -100,19 +100,19 @@
 }
 
 .activeBox:hover {
-  background: linear-gradient(135deg, transparent 45px, #d91667 0);
-}
-
-.activeBox {
   background: linear-gradient(135deg, transparent 45px, #e62e7a 0);
 }
 
+.activeBox {
+  background: linear-gradient(135deg, transparent 45px, #d91667 0);
+}
+
 .activeBox:hover .mass-block {
-  background-color: #d91667;
+  background-color: #e62e7a;
 }
 
 .activeBox .mass-block {
-  background-color: #e62e7a;
+  background-color: #d91667;
 }
 
 .wrapper_typicalBlock.disableBox {
