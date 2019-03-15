@@ -9,11 +9,6 @@
   margin-bottom: 25px;
   cursor: pointer;
   transition: all 0.3s;
-  margin-right: 80px;
-}
-
-.wrapper_typicalBlock:last-child {
-  margin-right: 0;
 }
 
 .wrapper_typicalBlock:hover {

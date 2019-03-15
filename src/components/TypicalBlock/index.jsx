@@ -17,12 +17,13 @@ const TypicalBlock = ({
   dopMessage,
   disabled,
   actived,
-  footerActiveText
+  footerActiveText,
+  handleChangeStatus
 }) => {
   const [activeBox, setStyle] = useState(actived);
   const [contentH3, setContentH3] = useState(prevH3);
 
-  function handleChangeStatus() {
+  function handleChangeStyle() {
     let newStatus;
     if (classNames !== "disableBox") {
       classNames === defaultStyle ? (newStatus = true) : (newStatus = false);
@@ -64,11 +65,11 @@ const TypicalBlock = ({
   return (
     <div
       className={classNames}
-      onClick={handleChangeStatus}
+      onClick={handleChangeStyle}
       onMouseLeave={handleChangeH3}
       onMouseOver={handleRechangeH3}
     >
-      <div className="typicalBlock">
+      <div className="typicalBlock" onClick={handleChangeStatus}>
         <h3 className="typicalBlock_h3">{contentH3}</h3>
         <h2 className="typicalBlock_h2">Нямушка</h2>
         <p className="typicalBlock_name-type">{nameType}</p>

@@ -1,39 +1,33 @@
 import React from "react";
 import { useFetch } from "./hooks";
-import TypicalBlock from "./components/TypicalBlock";
+import WrapTypicalBlocks from "./components/WrapTypicalBlocks";
 
 import "./App.css";
 
 const App = () => {
   const [dataFoods, loading] = useFetch("/catsFood.json");
 
+  const onChangeActive = id => {
+    console.log("actived id", id);
+    const idx = dataFoods.find(el => el.id === id);
+    console.log("idx", idx.actived);
+    idx.actived = !idx.actived;
+    console.log("newidx", idx.actived);
+  };
+
   return (
     <div className="App">
       <div className="App_container">
         <h1>Ты сегодня покормил кота?</h1>
-        <div className="App_wrap-blocks">
-          {loading ? (
-            <p className="App_loading">"Загрузка..."</p>
-          ) : (
-            dataFoods.map(item => {
-              const { ...itemProps } = item;
-              return (
-                <TypicalBlock
-                  // key={item.nameType}
-                  // nameType={item.nameType}
-                  // sumOfDose={item.sumOfDose}
-                  // present={item.present}
-                  // massa={item.massa}
-                  // dopMessage={item.dopMessage}
-                  // status={item.status}
-                  // disabled={item.disabled}
-                  // footerActiveText={item.footerActiveText}
-                  {...itemProps}
-                />
-              );
-            })
-          )}
-        </div>
+
+        {loading ? (
+          <p className="App_loading">"Загрузка..."</p>
+        ) : (
+          <WrapTypicalBlocks
+            dataFoods={dataFoods}
+            handleChangeStatus={onChangeActive}
+          />
+        )}
       </div>
     </div>
   );
