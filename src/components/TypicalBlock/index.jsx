@@ -44,12 +44,6 @@ const TypicalBlock = ({
   }
 
   let classNames = defaultStyle;
-  if (disabled) {
-    classNames = disableStyle;
-  }
-  if (actived || activeBox) {
-    classNames = activeStyle;
-  }
 
   const FooterText = () => {
     return disabled ? (
@@ -64,7 +58,13 @@ const TypicalBlock = ({
   };
   return (
     <div
-      className={classNames}
+      className={
+        disabled
+          ? (classNames = disableStyle)
+          : actived
+          ? (classNames = activeStyle)
+          : (classNames = defaultStyle)
+      }
       onClick={handleChangeStyle}
       onMouseLeave={handleChangeH3}
       onMouseOver={handleRechangeH3}
