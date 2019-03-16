@@ -1,4 +1,4 @@
-.wrapper_typicalBlock {
+.wrapper_cart {
   width: 320px;
   height: 480px;
   border-radius: 12px;
@@ -11,15 +11,15 @@
   transition: all 0.3s;
 }
 
-.wrapper_typicalBlock:hover {
+.wrapper_cart:hover {
   background: linear-gradient(135deg, transparent 45px, #2ea8e6 0);
 }
 
-.wrapper_typicalBlock:hover .mass-block {
+.wrapper_cart:hover .mass-block {
   background-color: #2ea8e6;
 }
 
-.wrapper_typicalBlock:hover .text_status span {
+.wrapper_cart:hover .text_status span {
   color: #2ea8e6;
 }
 
@@ -27,7 +27,7 @@
   background: linear-gradient(135deg, transparent 45px, #2ea8e6 0);
 } */
 
-.typicalBlock {
+.cart {
   width: calc(100% - 8px);
   height: calc(100% - 8px);
   border-radius: 12px;
@@ -39,7 +39,7 @@
   position: relative;
 }
 
-.typicalBlock_h3 {
+.cart_h3 {
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
@@ -50,20 +50,20 @@
   color: #e62e7a;
 }
 
-.typicalBlock_h2 {
+.cart_h2 {
   color: #000000;
   font-size: 48px;
   font-weight: 700;
 }
 
-.typicalBlock_name-type {
+.cart_name-type {
   color: #000000;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 15px;
 }
 
-.typicalBlock_text_status {
+.cart_text_status {
   position: absolute;
   text-shadow: 0 1px 0 black;
   font-size: 13px;
@@ -75,12 +75,12 @@
   transition: all 0.3s;
 }
 
-.typicalBlock_text_status p {
+.cart_text_status p {
   color: #ffffff;
   font-weight: 400;
 }
 
-.typicalBlock_text_status span {
+.cart_text_status span {
   color: #1698d9;
   font-weight: 700;
   cursor: pointer;
@@ -110,23 +110,23 @@
   background-color: #d91667;
 }
 
-.wrapper_typicalBlock.disableBox {
+.wrapper_cart.disableBox {
   background: linear-gradient(135deg, transparent 45px, #b3b3b3 0);
   cursor: none;
 }
 
-.wrapper_typicalBlock.disableBox .mass-block {
+.wrapper_cart.disableBox .mass-block {
   background-color: #292828;
 }
 
-.disableBox .typicalBlock_h3,
-.disableBox .typicalBlock_h2,
-.disableBox .typicalBlock_name-type,
+.disableBox .cart_h3,
+.disableBox .cart_h2,
+.disableBox .cart_name-type,
 .disableBox .mass-type {
   opacity: 0.5;
 }
 
-.disableBox .typicalBlock-overlay {
+.disableBox .cart-overlay {
   width: 312px;
   height: 472px;
   border-radius: 12px;

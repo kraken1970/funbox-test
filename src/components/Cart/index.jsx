@@ -7,9 +7,9 @@ import {
   prevH3,
   hoverH3
 } from "./constans";
-import "./TypicalBlock.css";
+import "./Cart.css";
 
-const TypicalBlock = ({
+const Cart = ({
   nameType,
   sumOfDose,
   present,
@@ -69,23 +69,23 @@ const TypicalBlock = ({
       onMouseLeave={handleChangeH3}
       onMouseOver={handleRechangeH3}
     >
-      <div className="typicalBlock" onClick={handleChangeStatus}>
-        <h3 className="typicalBlock_h3">{contentH3}</h3>
-        <h2 className="typicalBlock_h2">Нямушка</h2>
-        <p className="typicalBlock_name-type">{nameType}</p>
+      <div className="cart" onClick={handleChangeStatus}>
+        <h3 className="cart_h3">{contentH3}</h3>
+        <h2 className="cart_h2">Нямушка</h2>
+        <p className="cart_name-type">{nameType}</p>
         <MassType
           sumOfDose={sumOfDose}
           present={present}
           dopMessage={dopMessage}
           massa={massa}
         />
-        <div className="typicalBlock_text_status">
+        <div className="cart_text_status">
           <FooterText />
         </div>
       </div>
-      <div className="typicalBlock-overlay" />
+      <div className="cart-overlay" />
     </div>
   );
 };
 
-export default TypicalBlock;
+export default Cart;

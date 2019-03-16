@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import WrapTypicalBlocks from "./components/WrapTypicalBlocks";
+import CartList from "./components/CartList";
 
 import "./App.css";
 
@@ -51,7 +51,7 @@ export default class App extends Component {
           {loading ? (
             <p className="App_loading">"Загрузка..."</p>
           ) : (
-            <WrapTypicalBlocks
+            <CartList
               dataFoods={dataFoods}
               handleChangeStatus={this.onChangeActive}
             />

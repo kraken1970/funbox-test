@@ -5,7 +5,6 @@
     "sumOfDose": "10",
     "present": "мышь в подарок",
     "massa": "0,5",
-    "status": "",
     "actived": false,
     "disabled": false,
     "footerActiveText": "Печень утки разварная с артишоками."
@@ -16,8 +15,7 @@
     "sumOfDose": "40",
     "present": "2 мыши в подарок",
     "massa": "2",
-    "status": "activeBox",
-    "actived": false,
+    "actived": true,
     "disabled": false,
     "footerActiveText": "Головы щучьи с чесноком да свежайшая сёмгушка."
   },
@@ -28,7 +26,6 @@
     "present": "5 мышей в подарок",
     "massa": "5",
     "dopMessage": "заказчик доволен",
-    "status": "disabledBox",
     "actived": false,
     "disabled": true,
     "footerActiveText": "Филе из цыплят с трюфелями в бульоне."

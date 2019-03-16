@@ -1,13 +1,13 @@
 import React from "react";
-import TypicalBlock from "../TypicalBlock";
-import "./WrapTypicalBlocks.css";
+import Cart from "../Cart";
+import "./CartList.css";
 
-const WrapTypicalBlocks = ({ dataFoods, handleChangeStatus }) => {
+const CartList = ({ dataFoods, handleChangeStatus }) => {
   const elements = dataFoods.map(item => {
     const { id, ...itemProps } = item;
     return (
       <li key={id}>
-        <TypicalBlock
+        <Cart
           {...itemProps}
           handleChangeStatus={() => handleChangeStatus(id)}
         />
@@ -17,4 +17,4 @@ const WrapTypicalBlocks = ({ dataFoods, handleChangeStatus }) => {
   return <ul className="App_wrap-blocks">{elements}</ul>;
 };
 
-export default WrapTypicalBlocks;
+export default CartList;

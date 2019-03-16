@@ -37,7 +37,7 @@
 
 .App_wrap-blocks {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 1120px;
   max-width: 1120px;
   flex-wrap: wrap;
@@ -45,7 +45,6 @@
 
 @media only screen and (max-width: 1119px) {
   .App_wrap-blocks {
-    justify-content: space-around;
     width: 100%;
   }
   li,
