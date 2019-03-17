@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import CartList from "./components/CartList";
 
 import "./App.css";
+import "./font.css";
+import "./media.css";
 
 const API = "/catsFood.json";
 
@@ -18,7 +20,7 @@ export default class App extends Component {
         if (response.ok) {
           return response.json();
         } else {
-          throw new Error("Что-то здесь не так ...");
+          throw new Error();
         }
       })
       .then(dataFoods => this.setState({ dataFoods, loading: false }))
@@ -38,7 +40,7 @@ export default class App extends Component {
     const { dataFoods, loading, error } = this.state;
     if (error) {
       return (
-        <p className="App_loading">
+        <p className="error_loading">
           {error.message} <br /> Всё сломалось. Скоро починим!
         </p>
       );

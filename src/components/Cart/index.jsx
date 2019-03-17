@@ -5,7 +5,8 @@ import {
   disableStyle,
   activeStyle,
   prevH3,
-  hoverH3
+  hoverH3,
+  FooterText
 } from "./constans";
 import "./Cart.css";
 
@@ -45,17 +46,6 @@ const Cart = ({
 
   let classNames = defaultStyle;
 
-  const FooterText = () => {
-    return disabled ? (
-      <p className="footerText-disabled">Печалька, {nameType} закончился</p>
-    ) : activeBox ? (
-      <p>{footerActiveText}</p>
-    ) : (
-      <p>
-        Чего сидишь? Порадуй котэ, <span>купи.</span>
-      </p>
-    );
-  };
   return (
     <div
       className={
@@ -67,7 +57,9 @@ const Cart = ({
       }
       onClick={handleChangeStyle}
       onMouseLeave={handleChangeH3}
+      onTouchMove={handleChangeH3}
       onMouseOver={handleRechangeH3}
+      onTouchEnd={handleRechangeH3}
     >
       <div className="cart" onClick={handleChangeStatus}>
         <h3 className="cart_h3">{contentH3}</h3>
@@ -80,7 +72,7 @@ const Cart = ({
           massa={massa}
         />
         <div className="cart_text_status">
-          <FooterText />
+          {FooterText(disabled, activeBox, nameType, footerActiveText)}
         </div>
       </div>
       <div className="cart-overlay" />

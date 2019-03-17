@@ -2,5 +2,5 @@
 Формат:
 actived: задать исходное состояние выбран/не выбран
 disabled: есть/нет в наличие.
-Остальное понятно.
-deploy: https://funbox-baea1.firebaseapp.com/
+
+deploy: https://funbox-baea1.firebaseapp.com
